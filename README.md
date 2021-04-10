@@ -86,7 +86,7 @@ Python files are directly executable from within the terminal.
 ~~~
 
 ### How to cite ?
-If you are using the MOLAN workflow  in your research paper, please cite us as
+If you are using the AI4PFAS workflow  in your research paper, please cite us as
 ```
 @article{ai4pfas,
   title={Uncertainty-Informed Deep Transfer Learning of PFAS Toxicity},
