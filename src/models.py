@@ -10,20 +10,16 @@ from sklearn.pipeline import make_pipeline
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.decomposition import NMF
 
-##clean
-import sys
-sys.path.append('../../../molan-master/molan-master/code/')
-
-from graphnn import models as molan_model
-from graphnn import training
-from graphnn import mol2graph
+from .graphnn import models as molan_model
+from .graphnn import training
+from .graphnn import mol2graph
 
 from collections import OrderedDict
 
 import torch
 from torch_geometric.data import DataLoader
+
 from rdkit import Chem
-##
 
 class DNN(keras.Model):
     _n_layers = 1
