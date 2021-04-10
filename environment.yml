@@ -20,4 +20,4 @@ dependencies:
   - gpflow
   - torch-geometric
   - tensorflow=2.3
-  - tesnorflow-probability=0.11.1
+  - tensorflow-probability=0.11.1
