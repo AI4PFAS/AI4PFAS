@@ -1,0 +1,11 @@
+#python
+__pycache__/
+*.pyc
+*.pyo
+
+#ipython
+.ipynb_checkpoints
+
+#vscode
+.vscode
+settings.json
