@@ -1,0 +1,2 @@
+model_checkpoint_path: "dnn_mordred4_random_ensemble9.chkpt"
+all_model_checkpoint_paths: "dnn_mordred4_random_ensemble9.chkpt"
