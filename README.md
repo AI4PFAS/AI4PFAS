@@ -23,37 +23,37 @@ This repository contains code, instructions, and data used in the LDRD deep lear
 ~~~
 ai4pfas/
 +-- src/
-¦   +-- dataset.py
-¦   +-- experimental_setup.py
-¦   +-- helpers.py
-¦   +-- models.py
-¦   +-- preprocess_data.py
+Â¦   +-- dataset.py
+Â¦   +-- experimental_setup.py
+Â¦   +-- helpers.py
+Â¦   +-- models.py
+Â¦   +-- preprocess_data.py
 +-- notebooks/
-¦   +-- benchmarks/
-¦   ¦   +-- benchmarks.ipynb
-¦   ¦   +-- tuning-dnn-mordred.ipynb
-¦   ¦   +-- tuning-dnn-ecfp.ipynb
-¦   ¦   +-- tuning-gcn.ipynb (todo)
-¦   ¦   +-- tuning-rf-mordred.ipynb
-¦   ¦   +-- tuning-nmf.ipynb (todo)
-¦   ¦   +-- tuning-gp.ipynb (todo)
-¦   +-- transfer-learning.ipynb
-¦   +-- uncertainty.ipynb
-¦   +-- selective-net.ipynb
+Â¦   +-- benchmarks/
+Â¦   Â¦   +-- benchmarks.ipynb
+Â¦   Â¦   +-- tuning-dnn-mordred.ipynb
+Â¦   Â¦   +-- tuning-dnn-ecfp.ipynb
+Â¦   Â¦   +-- tuning-gcn.ipynb (todo)
+Â¦   Â¦   +-- tuning-rf-mordred.ipynb
+Â¦   Â¦   +-- tuning-nmf.ipynb (todo)
+Â¦   Â¦   +-- tuning-gp.ipynb (todo)
+Â¦   +-- transfer-learning.ipynb
+Â¦   +-- uncertainty.ipynb
+Â¦   +-- selective-net.ipynb
 +-- data/
-¦   +-- ldtoxdb/
-¦   ¦   +-- ldtoxdb.csv
-¦   ¦   +-- ldtoxdb-classified.csv
-¦   ¦   +-- ldtoxdb-mordred.csv
-¦   ¦   +-- preprocessed/
-¦   ¦   ¦   +-- random
-¦   ¦   ¦   +-- stratified
-¦   ¦   +-- benchmark-models/
-¦   ¦   +-- deep-ensemble/
-¦   ¦   +-- latent-space/
-¦   ¦   +-- transfer-learning/
-¦   +-- results/
-¦       +-- benchmarks
+Â¦   +-- ldtoxdb/
+Â¦   Â¦   +-- ldtoxdb.csv
+Â¦   Â¦   +-- ldtoxdb-classified.csv
+Â¦   Â¦   +-- ldtoxdb-mordred.csv
+Â¦   Â¦   +-- preprocessed/
+Â¦   Â¦   Â¦   +-- random
+Â¦   Â¦   Â¦   +-- stratified
+Â¦   Â¦   +-- benchmark-models/
+Â¦   Â¦   +-- deep-ensemble/
+Â¦   Â¦   +-- latent-space/
+Â¦   Â¦   +-- transfer-learning/
+Â¦   +-- results/
+Â¦       +-- benchmarks
 +-- environment.yml
 +-- README.md
 ~~~
@@ -84,6 +84,15 @@ Python files are directly executable from within the terminal.
 ~~~
 (ai4pfas) $ python ./src/deep-ensemble.py
 ~~~
+
+### How to cite ?
+If you are using the MOLAN workflow  in your research paper, please cite us as
+```
+@article{ai4pfas,
+  title={Uncertainty-Informed Deep Transfer Learning of PFAS Toxicity},
+  author={Feinstein, Jeremy and Sivaraman, Ganesh and Picel, Kurt and Peters, Brian and V{\'a}zquez-Mayagoitia, {\'A}lvaro and Ramanathan, Arvind and MacDonell, Margaret and Foster, Ian and Yan, Eugene}
+}
+```
 
 ## Acknowledgements
 This  material  is  based  upon  work  supported  by  Laboratory  Directed  Research  and  Development (LDRD) funding from Argonne National Laboratory, provided by the Director, Office of Science, of the U.S. Department of Energy under Contract No. DE-AC02-06CH11357.
