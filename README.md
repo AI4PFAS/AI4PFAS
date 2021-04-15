@@ -7,7 +7,10 @@
  \--/----\--/      / ____ \ _| |_     | |   | |    | | / ____ \ ____) | 
   \/______\/      /_/    \_\_____|    |_|   |_|    |_|/_/    \_\_____/   
 ~~~
+
 # AI for PFAS
+<img src='./media/toc-ai4pfas-01.svg' alt='AI for PFAS workflow can drive future experiments by making an informed decision based on uncertainty to select chemicals for prediction and future study.'></img>
+
 A deep learning expedition into PFAS toxicity. The preprint can be accessed [here](https://chemrxiv.org/articles/preprint/Uncertainty-Informed_Deep_Transfer_Learning_of_PFAS_Toxicity/14397140).
 
 ##### Contents
@@ -61,7 +64,7 @@ ai4pfas/
 ## Context
  - **Polyfluoroalkyl and perfluoroaklyl** *(PFAS)* - a family of organic industrial synthetics of increasing federal concern for unknown hazards and widespread contamination of DOD & DOE sites
  - **Acute oral rat toxicity** *(LD50)* - a nonspecific quantification of toxicity which measures the minimum 24-hr drug dose to induce 50% lethality in a sample of labratory rats
- - **LDToxDB** - shorthand for the compiled LD50 dataset (described below)
+ - **LDToxDB** - shorthand for the compiled LD50 dataset
 
 ## Dataset
 LDToxDB was created by compiling LD50 datasets from the [EPA Toxicity Estimation Software Tool (TEST)](https://www.epa.gov/chemical-research/toxicity-estimation-software-tool-test), [NIH Collaborative Acute Toxicity Modeling Suite (CATMoS)](https://ntp.niehs.nih.gov/iccvamreport/2019/technology/comp-tools-dev/catmos/index.html), and National Toxicology Program (NTP). Values represent experimental LD50 measurements in -log(mol/kg). Chemical duplicates were identified by InChIKey and removed.
