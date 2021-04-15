@@ -8,7 +8,7 @@
   \/______\/      /_/    \_\_____|    |_|   |_|    |_|/_/    \_\_____/   
 ~~~
 # AI for PFAS
-A deep learning expedition into PFAS toxicity. The preprint can be accessed [here](https://chemrxiv.org/articles/preprint/Uncertainty-Informed_Deep_Transfer_Learning_of_PFAS_Toxicity/14397140)
+A deep learning expedition into PFAS toxicity. The preprint can be accessed [here](https://chemrxiv.org/articles/preprint/Uncertainty-Informed_Deep_Transfer_Learning_of_PFAS_Toxicity/14397140).
 
 ##### Contents
  1. [Brief](#brief)
