@@ -8,7 +8,7 @@
   \/______\/      /_/    \_\_____|    |_|   |_|    |_|/_/    \_\_____/   
 ~~~
 # AI for PFAS
-A deep learning expedition into PFAS toxicity.
+A deep learning expedition into PFAS toxicity. 
 
 ##### Contents
  1. [Brief](#brief)
@@ -89,8 +89,12 @@ Python files are directly executable from within the terminal.
 If you are using the AI4PFAS workflow  in your research paper, please cite us as
 ```
 @article{ai4pfas,
-  title={Uncertainty-Informed Deep Transfer Learning of PFAS Toxicity},
-  author={Feinstein, Jeremy and Sivaraman, Ganesh and Picel, Kurt and Peters, Brian and V{\'a}zquez-Mayagoitia, {\'A}lvaro and Ramanathan, Arvind and MacDonell, Margaret and Foster, Ian and Yan, Eugene}
+author = "Jeremy Feinstein and ganesh sivaraman and Kurt Picel and Brian Peters and Alvaro Vazquez-Mayagoitia and Arvind Ramanathan and Margaret MacDonell and Ian Foster and Eugene Yan",
+title = "{Uncertainty-Informed Deep Transfer Learning of PFAS Toxicity}",
+year = "2021",
+month = "4",
+url = "https://chemrxiv.org/articles/preprint/Uncertainty-Informed_Deep_Transfer_Learning_of_PFAS_Toxicity/14397140",
+doi = "10.26434/chemrxiv.14397140.v1"
 }
 ```
 
