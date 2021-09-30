@@ -1,4 +1,5 @@
 import numpy as np
+import math
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
@@ -14,10 +15,10 @@ from .graphnn import models as molan_model
 from .graphnn import training
 from .graphnn import mol2graph
 
-from collections import OrderedDict
-
 import torch
 from torch_geometric.data import DataLoader
+
+from collections import OrderedDict
 
 from rdkit import Chem
 
@@ -37,7 +38,7 @@ class DNN(keras.Model):
     def generate_fcn(self):
         self.pipeline = []
 
-        for layer in range(self.n_layers):
+        for i, layer in enumerate(range(self.n_layers)):
             self.pipeline.append(layers.BatchNormalization())
             self.pipeline.append(layers.Dense(self.layer_size, activation='relu'))
         
@@ -96,8 +97,8 @@ class DNN_ECFP(DNN):
 
 class RF:
     seed = 9700
-    n_estimators = 200
-    max_depth = 30
+    n_estimators = 4096
+    max_depth = 32
     min_samples_split = 2
     min_samples_leaf = 1
 
@@ -132,8 +133,16 @@ class RF_NMF_ECFP(RF):
     def fit(self, x_train, y_train, seed=9700):
         self.estimator = make_pipeline(
             NMF(n_components=12, solver='mu', init='random', max_iter=500, random_state=0, alpha=.1, l1_ratio=.5),
-            RandomForestRegressor(min_samples_split=2, min_samples_leaf=1, max_depth = 30, n_estimators=200, n_jobs=-1,)
+            RandomForestRegressor(min_samples_split=self.min_samples_split,
+                                    min_samples_leaf=self.min_samples_leaf,
+                                    max_depth = self.max_depth,
+                                    n_estimators=self.n_estimators,
+                                    n_jobs=-1)
         )
+
+        self.estimator.fit(x_train, y_train.ravel())
+
+        return self
 
 
 class GP:
@@ -180,7 +189,7 @@ class GP:
 
 class SN_Mordred:
     batch_size = 256
-    learning_rate = 0.01
+    learning_rate = 0.004663515283240011
     epochs = 1000
     seed = 9700
 
@@ -191,13 +200,11 @@ class SN_Mordred:
         x = layers.Input(shape=input_shape)
 
         body = layers.BatchNormalization()(x)
-        body = layers.Dense(256, activation='relu')(body)
+        body = layers.Dense(128, activation='relu')(body)
         body = layers.BatchNormalization()(body)
-        body = layers.Dense(256, activation='relu')(body)
+        body = layers.Dense(128, activation='relu')(body)
         body = layers.BatchNormalization()(body)
-        body = layers.Dense(256, activation='relu')(body)
-        body = layers.BatchNormalization()(body)
-        body = layers.Dense(256, activation='relu')(body)
+        body = layers.Dense(128, activation='relu')(body)
         body = layers.BatchNormalization()(body)
 
         prediction = layers.Dense(1, activation='linear', name='prediction')(body)
@@ -209,7 +216,7 @@ class SN_Mordred:
         selection_out = layers.Concatenate(axis=1, name='selection_head')([prediction, selection])
         auxiliary_out = layers.Dense(1, activation='linear', name='auxiliary_head')(body)
 
-        self.model = tf.keras.models.Model(inputs=x, outputs=[selection_out, auxiliary_out])
+        self.model = tf.keras.models.Model(inputs=x, outputs=[selection_out, auxiliary_out, body])
 
     def fit(self, x_train, y_train, **kwargs):
         tf.random.set_seed(self.seed)
