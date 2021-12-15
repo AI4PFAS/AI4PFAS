@@ -11,7 +11,7 @@
 # AI for PFAS
 <img src='./media/toc-ai4pfas-01.svg' alt='AI for PFAS workflow can drive future experiments by making an informed decision based on uncertainty to select chemicals for prediction and future study.'></img>
 
-A deep learning expedition into PFAS toxicity. The preprint can be accessed [here](https://chemrxiv.org/articles/preprint/Uncertainty-Informed_Deep_Transfer_Learning_of_PFAS_Toxicity/14397140).
+A deep learning expedition into PFAS toxicity. The manuscript can be accessed [here](https://pubs.acs.org/doi/10.1021/acs.jcim.1c01204).
 
 ##### Contents
  1. [Brief](#brief)
@@ -89,15 +89,20 @@ Python files are directly executable from within the terminal.
 ~~~
 
 ### How to cite ?
-If you are using the AI4PFAS workflow  in your research paper, please cite us as
+If you are using the AI4PFAS workflow in your research, please cite us as
 ```
-@article{ai4pfas,
-author = "Jeremy Feinstein and ganesh sivaraman and Kurt Picel and Brian Peters and Alvaro Vazquez-Mayagoitia and Arvind Ramanathan and Margaret MacDonell and Ian Foster and Eugene Yan",
-title = "{Uncertainty-Informed Deep Transfer Learning of PFAS Toxicity}",
-year = "2021",
-month = "4",
-url = "https://chemrxiv.org/articles/preprint/Uncertainty-Informed_Deep_Transfer_Learning_of_PFAS_Toxicity/14397140",
-doi = "10.26434/chemrxiv.14397140.v1"
+@article{doi:10.1021/acs.jcim.1c01204,
+author = {Feinstein, Jeremy and Sivaraman, Ganesh and Picel, Kurt and Peters, Brian and Vázquez-Mayagoitia, Álvaro and Ramanathan, Arvind and MacDonell, Margaret and Foster, Ian and Yan, Eugene},
+title = {Uncertainty-Informed Deep Transfer Learning of Perfluoroalkyl and Polyfluoroalkyl Substance Toxicity},
+journal = {Journal of Chemical Information and Modeling},
+doi = {10.1021/acs.jcim.1c01204},
+note = {PMID: 34905348},
+URL = { 
+        https://doi.org/10.1021/acs.jcim.1c01204
+},
+eprint = { 
+        https://doi.org/10.1021/acs.jcim.1c01204
+}
 }
 ```
 
