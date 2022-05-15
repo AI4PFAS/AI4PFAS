@@ -25,40 +25,45 @@ This repository contains code, instructions, and data used in the LDRD deep lear
 ##### Repository structure
 ~~~
 ai4pfas/
++-- data/
+¦   +-- benchmark-models/
+¦   +-- deep-ensemble/
+¦   ¦   +-- base-models
+¦   ¦   +-- calibration
+¦   ¦   +-- transfer-models
+¦   +-- latent-space/
+¦   +-- preprocessed/
+¦   ¦   +-- random
+¦   ¦   +-- stratified
+¦   +-- selective-net/
+¦   +-- transfer-learning/
+¦   +-- ldtoxdb-classified.csv
+¦   +-- ldtoxdb-mordred.csv
+¦   +-- ldtoxdb-raw.csv
+¦   +-- pfas8k-classified.csv
+¦   +-- pfas8k-mordred.csv
++-- media/
++-- notebooks/
+¦   +-- benchmarks/
+¦   ¦   +-- benchmarks.ipynb
+¦   ¦   +-- tuning-dnn-ecfp.ipynb
+¦   ¦   +-- tuning-dnn-mordred.ipynb
+¦   ¦   +-- tuning-dnn-mordred-pfas-like-excluded.ipynb
+¦   ¦   +-- tuning-nmf.ipynb
+¦   ¦   +-- tuning-rf-mordred.ipynb
+¦   +-- selective-net.ipynb
+¦   +-- transfer-learning.ipynb
+¦   +-- uncertainty.ipynb
 +-- src/
+¦   +-- graphnn/
 ¦   +-- dataset.py
 ¦   +-- experimental_setup.py
 ¦   +-- helpers.py
 ¦   +-- models.py
 ¦   +-- preprocess_data.py
-+-- notebooks/
-¦   +-- benchmarks/
-¦   ¦   +-- benchmarks.ipynb
-¦   ¦   +-- tuning-dnn-mordred.ipynb
-¦   ¦   +-- tuning-dnn-ecfp.ipynb
-¦   ¦   +-- tuning-gcn.ipynb (todo)
-¦   ¦   +-- tuning-rf-mordred.ipynb
-¦   ¦   +-- tuning-nmf.ipynb (todo)
-¦   ¦   +-- tuning-gp.ipynb (todo)
-¦   +-- transfer-learning.ipynb
-¦   +-- uncertainty.ipynb
-¦   +-- selective-net.ipynb
-+-- data/
-¦   +-- ldtoxdb/
-¦   ¦   +-- ldtoxdb.csv
-¦   ¦   +-- ldtoxdb-classified.csv
-¦   ¦   +-- ldtoxdb-mordred.csv
-¦   ¦   +-- preprocessed/
-¦   ¦   ¦   +-- random
-¦   ¦   ¦   +-- stratified
-¦   ¦   +-- benchmark-models/
-¦   ¦   +-- deep-ensemble/
-¦   ¦   +-- latent-space/
-¦   ¦   +-- transfer-learning/
-¦   +-- results/
-¦       +-- benchmarks
-+-- environment.yml
++-- LICENSE
 +-- README.md
++-- environment.yml
 ~~~
 
 ## Context
